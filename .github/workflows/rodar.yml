@@ -2,7 +2,7 @@ name: Executar script Python semanalmente
 
 on:
   schedule:
-    - cron: '0 24 * * 6'  # Toda segunda-feira às 10:00 UTC
+    - cron: '0 10 * * 0'  # Toda segunda-feira às 10:00 UTC
   workflow_dispatch:       # Permite executar manualmente
 
 jobs:
