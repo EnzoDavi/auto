@@ -2,7 +2,7 @@ name: Executar script Python semanalmente
 
 on:
   schedule:
-    - cron: '0 15 * * 1'  # Toda segunda-feira às 10:00 UTC
+    - cron: '0 17 * * 6'  # Toda segunda-feira às 10:00 UTC
   workflow_dispatch:       # Permite executar manualmente
 
 jobs:
@@ -17,6 +17,9 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
+
+      - name: baixar bibliotecas
+        run: pip install -r requirement.txt
 
       - name: Executar script
         run: python main.py
